@@ -1,0 +1,375 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Plan LoL Panamá 2027</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..100,600..900&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap">
+<style>
+/* Lienzo: carbón azulado, con amarillo de señal como único acento fuerte */
+:root{
+  --bg:#0E1A1F;
+  --panel:#15262D;
+  --line:#25404A;
+  --fg:#EAF1EE;
+  --mute:#9EB6AE;
+  --accent:#F2C230;
+  --teal:#3FC1A4;
+  --coral:#FF7A59;
+  --blue:#6FA8DC;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:400 15px/1.55 "IBM Plex Sans",system-ui,sans-serif}
+.wrap{max-width:1080px;margin:0 auto;padding-inline:16px;padding-block:28px 56px}
+h1,h2,h3{font-family:"Archivo",system-ui,sans-serif;font-stretch:85%;margin:0;text-wrap:balance;line-height:1.1}
+.mono{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:13px}
+.kicker{font:600 12px/1 "IBM Plex Sans",sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}
+.block{margin-top:44px;padding-top:28px;border-top:1px solid var(--line)}
+.block h2{font-size:30px;font-weight:800;margin-top:10px}
+.sub{color:var(--mute);margin:8px 0 0;max-width:62ch}
+.grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:20px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:18px}
+.card h3{font-size:19px;font-weight:700;margin-bottom:8px}
+.card p{margin:0;color:var(--mute)}
+.big{font-family:"Archivo",sans-serif;font-stretch:80%;font-weight:900;font-size:44px;line-height:1;color:var(--accent)}
+
+/* Portada */
+.hero{padding:8px 0 0}
+.hero h1{font-size:clamp(40px,8vw,84px);font-weight:900;font-stretch:78%;letter-spacing:-.01em}
+.hero h1 span{color:var(--accent)}
+.pillars{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin-top:28px}
+.pillar{border-left:4px solid var(--accent);background:var(--panel);padding:16px 18px;border-radius:0 6px 6px 0}
+.pillar:nth-child(2){border-color:var(--teal)}
+.pillar:nth-child(3){border-color:var(--coral)}
+.pillar strong{font-family:"Archivo",sans-serif;font-stretch:85%;font-size:20px;display:block;margin-bottom:4px}
+.pillar span{color:var(--mute)}
+
+/* Calendario */
+.timeline{overflow-x:auto;margin-top:20px;border:1px solid var(--line);border-radius:6px;background:var(--panel);padding:14px 14px 10px}
+.tl-inner{min-width:640px}
+.tl-row{display:grid;grid-template-columns:190px 1fr;gap:12px;align-items:center;padding:7px 0;border-top:1px solid var(--line)}
+.tl-row:first-child{border-top:none}
+.months,.track{display:grid;grid-template-columns:repeat(12,1fr);gap:0}
+.months span{font:500 12px "IBM Plex Mono",monospace;color:var(--mute);text-align:center}
+.bar{height:26px;border-radius:4px;display:flex;align-items:center;padding:0 8px;font-size:12px;font-weight:600;color:#0E1A1F;white-space:nowrap}
+.b-clas{background:var(--blue)}
+.b-split{background:var(--teal)}
+.b-event{background:var(--accent)}
+.b-tbd{background:transparent;border:1.5px dashed var(--mute);color:var(--mute)}
+.legend{display:flex;flex-wrap:wrap;gap:14px;margin-top:14px;font-size:13px;color:var(--mute)}
+.legend i{display:inline-block;width:12px;height:12px;border-radius:2px;margin-right:6px;vertical-align:-1px}
+.note{font-size:13px;color:var(--mute);margin-top:12px}
+
+/* Flujo de clasificación */
+.flow{display:flex;flex-wrap:wrap;align-items:stretch;gap:8px;margin-top:20px}
+.step{flex:1 1 150px;background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:14px;min-width:0}
+.step b{font-family:"Archivo",sans-serif;font-stretch:85%;font-size:17px;display:block}
+.step small{color:var(--mute)}
+.arrow{align-self:center;color:var(--accent);font-size:22px;font-weight:700}
+
+/* Circuito */
+.rules{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px;margin-top:20px}
+.rule{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:14px}
+.rule .big{font-size:34px}
+.rule p{margin:4px 0 0;color:var(--mute);font-size:13px}
+.table-wrap{overflow-x:auto;margin-top:18px;border:1px solid var(--line);border-radius:6px}
+table{border-collapse:collapse;width:100%;min-width:420px;background:var(--panel)}
+th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);font-size:14px}
+th{font:600 12px "IBM Plex Sans",sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--mute)}
+td.n{font-family:"IBM Plex Mono",monospace;text-align:right;font-variant-numeric:tabular-nums}
+th.n{text-align:right}
+.tourneys{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:18px}
+.t{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:12px 8px;text-align:center}
+.t b{font-family:"Archivo",sans-serif;font-size:26px;display:block}
+.t span{font-size:12px;color:var(--mute)}
+.t.hi{border-color:var(--accent)}
+.t.hi b{color:var(--accent)}
+
+/* Playoff */
+.bracket{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-top:20px;align-items:center}
+.col{display:flex;flex-direction:column;gap:10px;min-width:0}
+.slot{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:10px 12px;font-size:14px}
+.slot.bye{border-color:var(--teal)}
+.slot.final{border-color:var(--accent);font-weight:600}
+.vs{font:500 11px "IBM Plex Mono",monospace;color:var(--mute);text-align:center}
+
+/* Jóvenes */
+.phases{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-top:20px}
+.phase{border-top:4px solid var(--teal);background:var(--panel);padding:14px;border-radius:0 0 6px 6px}
+.phase b{font-family:"Archivo",sans-serif;font-stretch:85%;font-size:18px;display:block}
+.phase span{color:var(--mute);font-size:14px}
+.budget-bar{display:flex;height:44px;border-radius:6px;overflow:hidden;margin-top:18px;border:1px solid var(--line)}
+.budget-bar div{min-width:0}
+.seg{font-size:11px;color:#0E1A1F;font-weight:600;display:flex;align-items:center;justify-content:center;overflow:hidden;white-space:nowrap}
+.legend-b{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:8px 16px;margin-top:14px;font-size:13px}
+.legend-b div{display:flex;justify-content:space-between;gap:8px;border-bottom:1px dashed var(--line);padding-bottom:4px}
+.legend-b em{font-style:normal;font-family:"IBM Plex Mono",monospace;font-variant-numeric:tabular-nums}
+.total{display:flex;flex-wrap:wrap;gap:14px;align-items:baseline;margin-top:16px}
+.total .big{font-size:52px}
+
+/* Visibilidad */
+.events{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin-top:20px}
+.ev{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:18px}
+.ev h3{font-size:19px;font-weight:700}
+.ev ul{margin:10px 0 0;padding-left:18px;color:var(--mute);font-size:14px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+.chip{border:1px solid var(--line);border-radius:999px;padding:6px 12px;font-size:13px;background:var(--panel)}
+
+/* KPI y riesgos */
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin-top:20px}
+.kpi{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:16px}
+.kpi b{font-family:"Archivo",sans-serif;font-size:17px;display:block;margin-bottom:6px}
+.kpi span{font-size:13px;color:var(--mute)}
+.risks{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:10px;margin-top:20px}
+.risk{border:1px solid var(--line);border-radius:6px;padding:12px 14px;background:var(--panel)}
+.risk b{color:var(--coral);font-size:14px;display:block}
+.risk span{font-size:13px;color:var(--mute)}
+
+/* Hoja de ruta */
+.road{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:0;margin-top:20px;position:relative}
+.stop{padding:14px 12px 14px 0;border-top:3px solid var(--line);position:relative}
+.stop::before{content:"";position:absolute;top:-8px;left:0;width:12px;height:12px;border-radius:50%;background:var(--accent)}
+.stop b{font:500 12px "IBM Plex Mono",monospace;color:var(--accent);display:block;margin-bottom:6px}
+.stop span{font-size:14px}
+
+.pend{columns:2;column-gap:28px;margin:18px 0 0;padding:0;list-style:none}
+.pend li{break-inside:avoid;padding:8px 0;border-bottom:1px dashed var(--line);font-size:14px;color:var(--mute)}
+.pend li::before{content:"○ ";color:var(--accent)}
+@media (max-width:640px){.pend{columns:1}.tl-row{grid-template-columns:1fr}.tourneys{grid-template-columns:repeat(3,1fr)}}
+</style>
+
+<div class="wrap">
+
+<!-- PORTADA -->
+<header class="hero">
+  <p class="kicker">Documento principal · borrador para revisión</p>
+  <h1>League of Legends<br><span>Panamá 2027</span></h1>
+  <p class="sub">Plan estratégico para levantar la escena nacional: un circuito que todos puedan jugar, talento joven que se entrena y un calendario que da visibilidad a los esports.</p>
+  <div class="pillars">
+    <div class="pillar"><strong>1. Circuito Nacional</strong><span>5 torneos, un jugador de selección por equipo, puntos que premian el cierre de temporada.</span></div>
+    <div class="pillar"><strong>2. Jóvenes talentos</strong><span>Hasta 21 años, panameños, con un mes de entrenamiento a fin de 2026.</span></div>
+    <div class="pillar"><strong>3. Visibilidad</strong><span>Una final presencial, contenido en todas las redes y eventos con otras comunidades.</span></div>
+  </div>
+</header>
+
+<!-- ECOSISTEMA -->
+<section class="block">
+  <p class="kicker">Punto de partida</p>
+  <h2>El ecosistema es inestable</h2>
+  <div class="grid3">
+    <div class="card"><div class="big">0</div><h3>Primeras divisiones en LATAM</h3><p>No hay primera división. La segunda (LRN y LRS) es el camino oficial.</p></div>
+    <div class="card"><div class="big">2</div><h3>Splits al año en LRN y LRS</h3><p>Sus fechas se anuncian dentro del mismo año, y no hay calendario para 2027.</p></div>
+    <div class="card"><div class="big">2027</div><h3>Copa de Naciones</h3><p>Se pospuso de noviembre de 2026 a noviembre de 2027 en Riyadh.</p></div>
+  </div>
+</section>
+
+<!-- CALENDARIO -->
+<section class="block">
+  <p class="kicker">Calendario de referencia</p>
+  <h2>Así se ve 2027</h2>
+  <p class="sub">Las barras son ventanas estimadas. Solo First Stand, MSI y Worlds tienen sede anunciada.</p>
+  <div class="timeline">
+    <div class="tl-inner">
+      <div class="tl-row">
+        <span class="mono" style="color:var(--mute)">Mes</span>
+        <div class="months"><span>E</span><span>F</span><span>M</span><span>A</span><span>M</span><span>J</span><span>J</span><span>A</span><span>S</span><span>O</span><span>N</span><span>D</span></div>
+      </div>
+      <div class="tl-row"><span>Clasificatorio LRN/LRS</span><div class="track"><div class="bar b-clas" style="grid-column:1/3">Ene–feb</div></div></div>
+      <div class="tl-row"><span>First Stand</span><div class="track"><div class="bar b-event" style="grid-column:3/4">Mar</div></div></div>
+      <div class="tl-row"><span>LRN/LRS Split 1</span><div class="track"><div class="bar b-split" style="grid-column:3/7">Mar–jun</div></div></div>
+      <div class="tl-row"><span>Clasificatorio pre-Split 2</span><div class="track"><div class="bar b-clas" style="grid-column:5/7">May–jun</div></div></div>
+      <div class="tl-row"><span>MSI (Europa)</span><div class="track"><div class="bar b-event" style="grid-column:6/8">Jun–jul</div></div></div>
+      <div class="tl-row"><span>Torneo de ascenso LTA</span><div class="track"><div class="bar b-clas" style="grid-column:7/8">Jul</div></div></div>
+      <div class="tl-row"><span>LRN/LRS Split 2</span><div class="track"><div class="bar b-split" style="grid-column:7/10">Jul–sep</div></div></div>
+      <div class="tl-row"><span>Worlds (Corea)</span><div class="track"><div class="bar b-event" style="grid-column:10/12">Oct–nov</div></div></div>
+      <div class="tl-row"><span>Copa de Naciones</span><div class="track"><div class="bar b-event" style="grid-column:11/12">Nov</div></div></div>
+    </div>
+  </div>
+  <div class="legend">
+    <span><i style="background:var(--blue)"></i>Clasificatorios</span>
+    <span><i style="background:var(--teal)"></i>Splits LRN/LRS</span>
+    <span><i style="background:var(--accent)"></i>Eventos internacionales</span>
+  </div>
+  <p class="note">Riesgo: Worlds y la Copa de Naciones pueden coincidir en noviembre de 2027.</p>
+</section>
+
+<!-- CLASIFICACIÓN -->
+<section class="block">
+  <p class="kicker">Ruta hacia el nivel profesional (referencia 2026)</p>
+  <h2>Cómo se llega a LCS o CBLOL</h2>
+  <div class="flow">
+    <div class="step"><b>Clasificatorio abierto</b><small>Torneo de 5 equipos, Bo5</small></div>
+    <div class="arrow">→</div>
+    <div class="step"><b>LRN o LRS</b><small>Último equipo defiende su plaza</small></div>
+    <div class="arrow">→</div>
+    <div class="step"><b>Playoffs</b><small>Los 6 primeros</small></div>
+    <div class="arrow">→</div>
+    <div class="step"><b>Torneo de ascenso</b><small>Top 2 de cada liga</small></div>
+    <div class="arrow">→</div>
+    <div class="step"><b>LCS o CBLOL</b><small>Tier 1</small></div>
+  </div>
+  <p class="note">Las reglas son de 2026 y deben confirmarse para 2027.</p>
+</section>
+
+<!-- CIRCUITO NACIONAL -->
+<section class="block">
+  <p class="kicker">Proyecto 1</p>
+  <h2>Circuito Nacional</h2>
+  <p class="sub">Un circuito con cinco torneos. Cada uno da puntos, y los seis mejores de la tabla general llegan al playoff final.</p>
+
+  <div class="rules">
+    <div class="rule"><div class="big">5 + 2</div><p>Titulares y suplentes por equipo</p></div>
+    <div class="rule"><div class="big">1</div><p>Jugador de la selección por equipo</p></div>
+    <div class="rule"><div class="big">8</div><p>Equipos ideales (mínimo 6 para puntuar)</p></div>
+    <div class="rule"><div class="big">BO1</div><p>Hasta semifinal. BO3 en semis y final</p></div>
+  </div>
+
+  <h3 style="margin-top:28px;font-size:20px">Los 5 torneos</h3>
+  <div class="tourneys">
+    <div class="t"><b>1</b><span>Puntaje base</span></div>
+    <div class="t"><b>2</b><span>Puntaje base</span></div>
+    <div class="t"><b>3</b><span>Puntaje base</span></div>
+    <div class="t hi"><b>4</b><span>Puntaje alto</span></div>
+    <div class="t hi"><b>5</b><span>Puntaje alto</span></div>
+  </div>
+  <p class="note">Los dos últimos torneos jugados dan el puntaje alto. Si uno se cancela, el alto se recorre al último par que sí se juega.</p>
+
+  <h3 style="margin-top:28px;font-size:20px">Puntos por posición</h3>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Posición</th><th class="n">Base</th><th class="n">Alto</th></tr></thead>
+      <tbody>
+        <tr><td>1.°</td><td class="n">50</td><td class="n">80</td></tr>
+        <tr><td>2.°</td><td class="n">35</td><td class="n">55</td></tr>
+        <tr><td>3.° – 4.°</td><td class="n">20</td><td class="n">35</td></tr>
+        <tr><td>5.° – 8.°</td><td class="n">10</td><td class="n">18</td></tr>
+        <tr><td>9.° – 16.°</td><td class="n">5</td><td class="n">8</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3 style="margin-top:28px;font-size:20px">Cómo se juega cada torneo</h3>
+  <div class="grid3">
+    <div class="card"><h3>Sábado</h3><p>3:00 a 8:00 p. m. Partidas en paralelo, en línea.</p></div>
+    <div class="card"><h3>Domingo</h3><p>3:00 a 8:00 p. m. Semifinales y final. Se transmiten la final y una semifinal.</p></div>
+    <div class="card"><h3>Puntualidad</h3><p>15 minutos de tolerancia. Discord obligatorio y pantalla compartida si lo piden los árbitros.</p></div>
+  </div>
+
+  <h3 style="margin-top:28px;font-size:20px">Playoff final</h3>
+  <div class="bracket">
+    <div class="col">
+      <div class="slot bye">Seed 1 · bye directo</div>
+      <div class="slot bye">Seed 2 · bye directo</div>
+      <div class="vs">— bracket BO1 —</div>
+      <div class="slot">Seed 3 vs Seed 6</div>
+      <div class="slot">Seed 4 vs Seed 5</div>
+    </div>
+    <div class="col">
+      <div class="slot">Seed 1 vs clasificado 2 · BO3</div>
+      <div class="slot">Seed 2 vs clasificado 1 · BO3</div>
+    </div>
+    <div class="col">
+      <div class="slot final">Final · BO3 · campeón del circuito</div>
+    </div>
+  </div>
+
+  <h3 style="margin-top:28px;font-size:20px">Premios</h3>
+  <div class="grid3">
+    <div class="card"><h3>En cada torneo</h3><p>Una parte para el ganador y otra para el pool de los 6 mejores.</p></div>
+    <div class="card"><h3>Al cierre</h3><p>Una base igual para los 6 clasificados y un extra para el 1.° y el 2.°.</p></div>
+    <div class="card"><h3>Inscripción</h3><p>Gratuita con patrocinio. Sin patrocinio, de 20 a 25 dólares por equipo.</p></div>
+  </div>
+</section>
+
+<!-- JÓVENES -->
+<section class="block">
+  <p class="kicker">Proyecto 2</p>
+  <h2>Jóvenes talentos</h2>
+  <p class="sub">Un mes de entrenamiento a finales de 2026, con seguimiento de tres meses en 2027.</p>
+
+  <div class="grid3">
+    <div class="card"><h3>Quiénes</h3><p>Hasta 21 años, panameños, con al menos Diamond 2 en LAN, verificado.</p></div>
+    <div class="card"><h3>Cómo</h3><p>Entrenamiento en Triex, con dos asistentes de la selección y una actividad de equipo.</p></div>
+    <div class="card"><h3>Después</h3><p>Coaching remoto durante tres meses, y una cena para cerrar el mes.</p></div>
+  </div>
+
+  <h3 style="margin-top:28px;font-size:20px">Ruta del programa</h3>
+  <div class="phases">
+    <div class="phase"><b>Convocatoria</b><span>Octubre a noviembre 2026. Verificación de rango, edad y residencia.</span></div>
+    <div class="phase"><b>Entrenamiento</b><span>Un mes, a finales de 2026.</span></div>
+    <div class="phase"><b>Celebración</b><span>Cena de cierre del programa.</span></div>
+    <div class="phase"><b>Seguimiento</b><span>Tres meses de coaching remoto en 2027.</span></div>
+  </div>
+
+  <h3 style="margin-top:28px;font-size:20px">Presupuesto</h3>
+  <div class="budget-bar">
+    <div class="seg" style="flex:700;background:var(--blue)">Entrenadores</div>
+    <div class="seg" style="flex:640;background:var(--teal)">Cena</div>
+    <div class="seg" style="flex:438;background:var(--mute)">Imprevistos</div>
+    <div class="seg" style="flex:350;background:var(--accent)">Actividad</div>
+    <div class="seg" style="flex:300;background:var(--coral)">Seguimiento</div>
+    <div class="seg" style="flex:200;background:var(--blue)">Merch</div>
+  </div>
+  <div class="legend-b">
+    <div>Entrenador y asistentes<em>700</em></div>
+    <div>Cena (patrocinable)<em>640</em></div>
+    <div>Actividad (escape room)<em>350</em></div>
+    <div>Seguimiento 3 meses<em>300</em></div>
+    <div>Uniformes<em>120</em></div>
+    <div>Mousepads<em>80</em></div>
+    <div>Imprevistos 20%<em>438</em></div>
+  </div>
+  <div class="total">
+    <span class="big">≈ 2,600</span>
+    <span style="color:var(--mute)">dólares. Sin cena: ≈ 1,860. Alojamiento opcional aparte: 2,400.</span>
+  </div>
+  <p class="note">Patrocinio de 3,000 a 5,000 dólares: cubre el costo y deja un excedente de 200 a 2,500 para la federación.</p>
+</section>
+
+<!-- VISIBILIDAD -->
+<section class="block">
+  <p class="kicker">Visibilidad y eventos</p>
+  <h2>Eventos con más que competencia</h2>
+  <p class="sub">El formato largo permite contenido antes, durante y después. Los eventos se planean junto a otras comunidades, nunca solo para el nicho competitivo.</p>
+
+  <div class="events">
+    <div class="ev"><h3>Gran final presencial</h3><ul><li>Cierre de temporada</li><li>Puede coincidir con un evento de cultura pop</li><li>Fecha confirmada con 3 meses de anticipación</li></ul></div>
+    <div class="ev"><h3>Triex</h3><ul><li>Artist alley y TCG</li><li>Arte de videojuegos y anime</li><li>Equipos de realidad virtual</li><li>Talleres y música en el salón de arte</li></ul></div>
+    <div class="ev"><h3>Contenido</h3><ul><li>Transmisiones bien producidas</li><li>Historias de equipos por provincia</li><li>Resultados y clips cada fin de semana</li></ul></div>
+  </div>
+
+  <h3 style="margin-top:28px;font-size:20px">Plataformas</h3>
+  <div class="chips">
+    <span class="chip">Instagram</span><span class="chip">TikTok</span><span class="chip">YouTube</span><span class="chip">Facebook</span><span class="chip">X</span><span class="chip">Twitch / Kick</span><span class="chip">Discord</span><span class="chip">WhatsApp</span>
+  </div>
+</section>
+
+<!-- KPI -->
+<section class="block">
+  <p class="kicker">Qué medimos</p>
+  <h2>Participación primero</h2>
+  <p class="sub">Un circuito con muchos equipos y jugadores distintos es mejor señal de interés que las visualizaciones.</p>
+  <div class="kpis">
+    <div class="kpi"><b>Equipos por torneo</b><span>Meta: 16 equipos</span></div>
+    <div class="kpi"><b>Jugadores únicos</b><span>Por temporada</span></div>
+    <div class="kpi"><b>Retención</b><span>Equipos que vuelven al siguiente torneo</span></div>
+    <div class="kpi"><b>Temporada completa</b><span>Equipos que juegan los 5 torneos</span></div>
+    <div class="kpi"><b>Jugadores nuevos</b><span>Cada temporada</span></div>
+    <div class="kpi"><b>Visualizaciones</b><span>Indicador secundario de alcance</span></div>
+  </div>
+</section>
+
+<!-- HOJA DE RUTA -->
+<section class="block">
+  <p class="kicker">Hoja de ruta</p>
+  <h2>Del 2026 al 2027</h2>
+  <div class="road">
+    <div class="stop"><b>OCT–NOV 2026</b><span>Validar reglamento. Abrir convocatoria de jóvenes.</span></div>
+    <div class="stop"><b>NOV–DIC 2026</b><span>Programa de jóvenes: un mes de entrenamiento.</span></div>
+    <div class="stop"><b>ENE–FEB 2027</b><span>Inscripciones al circuito. Calendario de LRN y LRS.</span></div>
+    <div class="stop"><b>MAR–SEP 2027</b><span>Temporada del circuito de 11 semanas. Seguimiento de jóvenes.</span></div>
+    <div class="stop"><b>NOV 2027</b><span>Gran final presencial, si hay fecha y patrocinio.</span></div>
+  </div>
+</section>
+
+</div>
+
+</body></html>
