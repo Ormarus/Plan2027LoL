@@ -133,6 +133,13 @@ th.n{text-align:right}
 .pend{columns:2;column-gap:28px;margin:18px 0 0;padding:0;list-style:none}
 .pend li{break-inside:avoid;padding:8px 0;border-bottom:1px dashed var(--line);font-size:14px;color:var(--mute)}
 .pend li::before{content:"○ ";color:var(--accent)}
+/* Resalte al pasar el mouse */
+.card,.kpi,.rule,.t,.ev,.phase,.step,.slot,.risk,.chip,.pillar{transition:background .15s,border-color .15s,color .15s}
+.card:hover,.kpi:hover,.rule:hover,.t:hover,.ev:hover,.phase:hover,.step:hover,.slot:hover,.risk:hover,.chip:hover,.pillar:hover{background:#1C3139;border-color:var(--accent)}
+table tr:hover td{background:#1C3139;color:var(--fg)}
+.tl-row:hover{background:rgba(242,194,48,.06)}
+.legend-b div:hover{color:var(--accent)}
+.legend-b div:hover em{color:var(--accent)}
 @media (max-width:640px){.pend{columns:1}.tl-row{grid-template-columns:1fr}.tourneys{grid-template-columns:repeat(3,1fr)}}
 </style>
 
